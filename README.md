@@ -1,4 +1,4 @@
-# StyleGan2 FACIAL FEATURES EDITING
+# StyleGan2 Facial Features Editor
 Notebook for training and generating samples with Colab and Google Drive using lucidrains' StyleGAN2 PyTorch implementation. The purpose of this demo is not to showcase high-resolution results - it is to demonstrate and explain the contributions of various techniques to perceptible result quality as well as the various problems that can be encountered when training GANs. As a result, many of the generated images in the demo are of noticeably poor quality (in various ways), because they are meant to be demonstrating modes of failure and/or the result of not incorporating certain techniques.
 
 # Demo
