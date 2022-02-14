@@ -14,7 +14,7 @@ Because GAN is unsupervised learning, there are no established metrics like Accu
 # Project Progress
 So far, this is a couple days' work and a few days of training, but I think it is already somewhat interesting. Expect updates whenever I have a few Colab GPUs to allocate to this (I am usually using all 4 for other projects). I should have some time for this mid-December, so I will try to get some results from: longer training on current configurations, training with lower network capacities (to deal with the pervasive mode collapse), some training on higher (512x512) resolution where applicable, and training current configurations with lower learning rates where useful (while demonstrating divergence due to high learning rate is useful (particularly for the afhq-dog model), there is value in showing the result on the same configuration with a tuned learning rate, however I don't intend to commit the time to tuning the learning rate for every model - these things take forever to train even with optimal learning rates).
 
-# KEYWORDS
+# Keywords
 1. Latent Representation of an image : Dimensionality Reduction
 2. Latent Space : Represtation of compressed data (We can visualize the latent space using algorithms such as t-SNE and LLE, which takes our latent space representation and transforms it into 2D or 3D )
 3. Z spaces : A z vector is nothing but a vector containing random values from a Gaussian (normal) distribution. The z-vector is often passed as an input into a fully trained GAN generator model following which the model spits out a real-looking fake image.
