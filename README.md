@@ -20,4 +20,7 @@ So far, this is a couple days' work and a few days of training, but I think it i
 3. Z spaces : A z vector is nothing but a vector containing random values from a Gaussian (normal) distribution. The z-vector is often passed as an input into a fully trained GAN generator model following which the model spits out a real-looking fake image.
 4. Style codes/Style vectors : instead of passing the z-vector directly into the generator (which, FYI, is sometimes also called a synthesis network in StyleGANs paper), it is first passed through a mapping network to produce a w-vector AKA style code AKA style vector. This is then injected into the synthesis network at various layers (after undergoing some layer-specific transformations) and the output we get is an awesome high-fidelity image.
 5. Latent Space Interpolation : Simply take two latent codes, which could be the codes for images of you and your favorite celeb. Now in a well-developed latent space, these two points would be far because chances are, you look nothing like your favorite celebrity. However, you can pick a point (in space) between these two points, feed it to the Generator and create an intermediate output. Sort of like a mashup of you and your celeb crush, (or a love-child) if you may! This is what latent space interpolation is all about- smooth transitions between two latent codes in latent space.
+# Dataset Curation (LPIPS + CLIP)
+
+
 
