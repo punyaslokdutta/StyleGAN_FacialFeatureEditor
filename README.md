@@ -1,6 +1,9 @@
 # StyleGan2 Facial Features Editor
 Notebook for training and generating samples with Colab and Google Drive using lucidrains' StyleGAN2 PyTorch implementation. The purpose of this demo is not to showcase high-resolution results - it is to demonstrate and explain the contributions of various techniques to perceptible result quality as well as the various problems that can be encountered when training GANs. As a result, many of the generated images in the demo are of noticeably poor quality (in various ways), because they are meant to be demonstrating modes of failure and/or the result of not incorporating certain techniques.
 
+![illustartionCelebaHQ](https://user-images.githubusercontent.com/13198518/154096196-19525e20-fb5e-44e8-90a8-ab98aae6539e.jpeg)
+
+
 # Demo
 The StyleGAN network has two features: generating high-resolution images using Progressive Growing, and incorporating image styles into each layer using AdaIN.
 1. Progressive Growing GAN (generating high-resolution images)
