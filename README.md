@@ -9,7 +9,7 @@ The StyleGAN network has two features: generating high-resolution images using P
 1. Progressive Growing GAN (generating high-resolution images)
 2. AdaIN is a normalization method for style transfer  (StyleGAN)
 3. The original StyleGAN Generator has a simple configuration. Without Progressive Growing, such simple generators has difficulty to generating high-resolution images a. But by increasing the expressive power of Generator and Discriminator, It seems possible to generate high resolution images without Progressive Growing.(StyleGan2 uses different method to produce high res + different Normalizatin method than ADAIn)
-https://colab.research.google.com/drive/1uwPlY-4P_6fJ59SFRtgZLebVGgwGrUQu?usp=sharing
+
 
 # GAN evaluation metrics
 Because GAN is unsupervised learning, there are no established metrics like Accuracy or F1 score for supervised learning. Here, I introduce the frequently used metric called Frechet Inception Distance, and the Perceptual Path Length proposed by StyeGAN.
