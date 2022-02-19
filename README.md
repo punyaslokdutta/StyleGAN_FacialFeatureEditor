@@ -26,4 +26,7 @@ So far, this is a couple days' work and a few days of training, but I think it i
 # Dataset Curation (LPIPS + CLIP)
 
 
+<img width="1247" alt="Style_gan_latent_space" src="https://user-images.githubusercontent.com/13198518/154794876-dd2aefe0-b455-4ce3-8f1c-c061585d20fe.png">
+
+
 
