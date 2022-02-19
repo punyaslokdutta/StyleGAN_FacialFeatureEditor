@@ -28,5 +28,10 @@ So far, this is a couple days' work and a few days of training, but I think it i
 
 <img width="1247" alt="Style_gan_latent_space" src="https://user-images.githubusercontent.com/13198518/154794876-dd2aefe0-b455-4ce3-8f1c-c061585d20fe.png">
 
-
+# StyleGAN2 vs StyleGAN#
+1. summary and key insights
+2. StyleGAN2’s methods
+3. Normalization method instead of AdaIN
+4. A high-resolution image generation method instead of Progressive Growing
+5. Path Length Regularization to smooth latent space
 
