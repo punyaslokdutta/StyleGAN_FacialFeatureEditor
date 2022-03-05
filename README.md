@@ -4,7 +4,7 @@ Notebook for training and generating samples with Colab and Google Drive using l
 ![illustartionCelebaHQ](https://user-images.githubusercontent.com/13198518/154096196-19525e20-fb5e-44e8-90a8-ab98aae6539e.jpeg)
 
 
-# Demo
+# Demo [https://share.streamlit.io/punyaslokdutta/stylegan_facialfeatureeditor/main]
 The StyleGAN network has two features: generating high-resolution images using Progressive Growing, and incorporating image styles into each layer using AdaIN.
 1. Progressive Growing GAN (generating high-resolution images)
 2. AdaIN is a normalization method for style transfer  (StyleGAN)
