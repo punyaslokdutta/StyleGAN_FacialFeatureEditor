@@ -18,7 +18,9 @@ The StyleGAN network has two features: generating high-resolution images using P
 5. Upon completion of optimization you are able to transform your latent vector as you wish. For example you can find a "smiling direction" in your latent space, move your latent vector in this direction and transform it back to image using the generator.
 <img width="1247" alt="Style_gan_latent_space" src="https://user-images.githubusercontent.com/13198518/154794876-dd2aefe0-b455-4ce3-8f1c-c061585d20fe.png">
 
-# Dataset Curation (LPIPS + CLIP)
+# Dataset + Preprocessing(LPIPS + CLIP)
+1. Dataset of FFHQ's generation has a crop process to align face area.see paper, appendix C. So the output distribution of StyleGAN model learned on FFHQ has a strong prior tendency on features position. We observed that many face images projection suffers semantic mistakes, e.g. erasing original eyes and transforming eyebrow into eyes during projection fitting (however you can get a similar face at last, but it may yield freak results when you manipulate the latent code). Finally we figured out that mainly caused by unalignment with training dataset prior distribution.
+2. ClIP Service used : https://colab.research.google.com/drive/1ALyz-bRhVsQvnsQdAuVITMiJo4ZiAjwq?usp=sharing
 
 # GAN evaluation metrics
 Because GAN is unsupervised learning, there are no established metrics like Accuracy or F1 score for supervised learning. Here, I introduce the frequently used metric called Frechet Inception Distance, and the Perceptual Path Length proposed by StyeGAN.
