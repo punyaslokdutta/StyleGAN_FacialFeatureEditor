@@ -30,7 +30,7 @@ def main():
     st.sidebar.title("Features")
     seed = 27834096
     # If the user doesn't want to select which features to control, these will be used.
-    default_control_features = ["Young", "Smiling", "Female"]
+    default_control_features = ["Young", "Smiling", "Male"]
 
     if st.sidebar.checkbox("Show advanced options"):
         # Randomly initialize feature values.
