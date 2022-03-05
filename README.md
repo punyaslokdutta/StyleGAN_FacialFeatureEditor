@@ -10,6 +10,15 @@ The StyleGAN network has two features: generating high-resolution images using P
 2. AdaIN is a normalization method for style transfer  (StyleGAN)
 3. The original StyleGAN Generator has a simple configuration. Without Progressive Growing, such simple generators has difficulty to generating high-resolution images a. But by increasing the expressive power of Generator and Discriminator, It seems possible to generate high resolution images without Progressive Growing.(StyleGan2 uses different method to produce high res + different Normalizatin method than ADAIn)
 
+# Latent Space Interpolation Direction Vectors
+1. Trained ResNet to predict latent representations of images
+2. Pre-trained Resnet network is used for transforming a reference image and generated image into high-level features space
+3. Loss is calculated as a difference between them in the features space
+4. Optimization is performed only for latent representation which we want to obtain.
+5. Upon completion of optimization you are able to transform your latent vector as you wish. For example you can find a "smiling direction" in your latent space, move your latent vector in this direction and transform it back to image using the generator.
+<img width="1247" alt="Style_gan_latent_space" src="https://user-images.githubusercontent.com/13198518/154794876-dd2aefe0-b455-4ce3-8f1c-c061585d20fe.png">
+
+# Dataset Curation (LPIPS + CLIP)
 
 # GAN evaluation metrics
 Because GAN is unsupervised learning, there are no established metrics like Accuracy or F1 score for supervised learning. Here, I introduce the frequently used metric called Frechet Inception Distance, and the Perceptual Path Length proposed by StyeGAN.
@@ -23,15 +32,9 @@ So far, this is a couple days' work and a few days of training, but I think it i
 3. Z spaces : A z vector is nothing but a vector containing random values from a Gaussian (normal) distribution. The z-vector is often passed as an input into a fully trained GAN generator model following which the model spits out a real-looking fake image.
 4. Style codes/Style vectors : instead of passing the z-vector directly into the generator (which, FYI, is sometimes also called a synthesis network in StyleGANs paper), it is first passed through a mapping network to produce a w-vector AKA style code AKA style vector. This is then injected into the synthesis network at various layers (after undergoing some layer-specific transformations) and the output we get is an awesome high-fidelity image.
 5. Latent Space Interpolation : Simply take two latent codes, which could be the codes for images of you and your favorite celeb. Now in a well-developed latent space, these two points would be far because chances are, you look nothing like your favorite celebrity. However, you can pick a point (in space) between these two points, feed it to the Generator and create an intermediate output. Sort of like a mashup of you and your celeb crush, (or a love-child) if you may! This is what latent space interpolation is all about- smooth transitions between two latent codes in latent space.
-# Dataset Curation (LPIPS + CLIP)
 
-# Latent Space Interpolation Direction Vectors
-1. Trained ResNet to predict latent representations of images
-2. Pre-trained Resnet network is used for transforming a reference image and generated image into high-level features space
-3. Loss is calculated as a difference between them in the features space
-4. Optimization is performed only for latent representation which we want to obtain.
-5. Upon completion of optimization you are able to transform your latent vector as you wish. For example you can find a "smiling direction" in your latent space, move your latent vector in this direction and transform it back to image using the generator.
-<img width="1247" alt="Style_gan_latent_space" src="https://user-images.githubusercontent.com/13198518/154794876-dd2aefe0-b455-4ce3-8f1c-c061585d20fe.png">
+
+
 
 # StyleGAN2 vs StyleGAN #
 1. summary and key insights
