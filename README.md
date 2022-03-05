@@ -20,7 +20,8 @@ The StyleGAN network has two features: generating high-resolution images using P
 
 # Dataset + Preprocessing(LPIPS + CLIP)
 1. Face image pose alignment : Dataset of FFHQ's generation has a crop process to align face area.see paper, appendix C. So the output distribution of StyleGAN model learned on FFHQ has a strong prior tendency on features position. We observed that many face images projection suffers semantic mistakes, e.g. erasing original eyes and transforming eyebrow into eyes during projection fitting (however you can get a similar face at last, but it may yield freak results when you manipulate the latent code). Finally we figured out that mainly caused by unalignment with training dataset prior distribution.
-2. ClIP Service used : https://colab.research.google.com/drive/1ALyz-bRhVsQvnsQdAuVITMiJo4ZiAjwq?usp=sharing
+2. CLIP Service used : https://colab.research.google.com/drive/1ALyz-bRhVsQvnsQdAuVITMiJo4ZiAjwq?usp=sharing
+3. CelebHQ dataset : http://mmlab.ie.cuhk.edu.hk/projects/CelebA/CelebAMask_HQ.html#:~:text=CelebAMask%2DHQ%20is%20a%20large,facial%20attributes%20corresponding%20to%20CelebA.
 
 # GAN evaluation metrics
 Because GAN is unsupervised learning, there are no established metrics like Accuracy or F1 score for supervised learning. Here, I introduce the frequently used metric called Frechet Inception Distance, and the Perceptual Path Length proposed by StyeGAN.
