@@ -16,6 +16,7 @@ The StyleGAN network has two features: generating high-resolution images using P
 3. Loss is calculated as a difference between them in the features space
 4. Optimization is performed only for latent representation which we want to obtain.
 5. Upon completion of optimization you are able to transform your latent vector as you wish. For example you can find a "smiling direction" in your latent space, move your latent vector in this direction and transform it back to image using the generator.
+6. Latent Space Direction Vectors (.npy ): https://github.com/a312863063/generators-with-stylegan2/tree/master/latent_directions
 <img width="1247" alt="Style_gan_latent_space" src="https://user-images.githubusercontent.com/13198518/154794876-dd2aefe0-b455-4ce3-8f1c-c061585d20fe.png">
 
 # Dataset + Preprocessing(LPIPS + CLIP)
