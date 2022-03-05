@@ -14,10 +14,10 @@ import tfutil_cpu
 
 
 def main():
-    st.title("Streamlit Face-GAN Demo")
-    """This demo demonstrates  using [Nvidia's Progressive Growing of GANs](https://research.nvidia.com/publication/2017-10_Progressive-Growing-of) and 
-    Shaobo Guan's [Transparent Latent-space GAN method](https://blog.insightdatascience.com/generating-custom-photo-realistic-faces-using-ai-d170b1b59255) 
-    for tuning the output face's characteristics. For more information, check out the tutorial on [Towards Data Science](https://towardsdatascience.com/building-machine-learning-apps-with-streamlit-667cef3ff509)."""
+    st.title("STyleGAN with Latent Direction Interpolation")
+    """This demo demonstrates  using [Nvidia's StyleGan Progressive Growing of GANs](https://arxiv.org/abs/1912.04958v2) and 
+    Shaobo Guan's [Transparent Latent-space GAN method] 
+    for tuning the output face's characteristics."""
 
     # Download all data files if they aren't already in the working directory.
     for filename in EXTERNAL_DEPENDENCIES.keys():
@@ -30,7 +30,7 @@ def main():
     st.sidebar.title("Features")
     seed = 27834096
     # If the user doesn't want to select which features to control, these will be used.
-    default_control_features = ["Young", "Smiling", "Male"]
+    default_control_features = ["Young", "Smiling", "Female"]
 
     if st.sidebar.checkbox("Show advanced options"):
         # Randomly initialize feature values.
@@ -71,7 +71,8 @@ def main():
     st.sidebar.write(
         """Apps like these that allow you to visually inspect model inputs help you
         find these biases so you can address them in your model _before_ it's put into
-        production.
+        production. People have already open-sourced some directional latent vectors for StyleGAN2
+        that allow us to "move" in the latent space and control a particular feature.
         """
     )
     st.sidebar.caption(f"Streamlit version `{st.__version__}`")
